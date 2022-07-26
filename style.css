@@ -1,0 +1,59 @@
+/* *, *::before, *::after {
+    box-sizing: border-box;
+} */
+
+/* html {
+    box-sizing: border-box;
+} */
+
+body{
+    background: hsl(30, 38%, 92%);
+    /* position: absolute; */
+
+}
+
+.card > * {  /* == card > *  */
+    background: white;
+    /* overflow: hidden; */
+}
+
+.card {
+    display: flex; /* using felx box */
+    /* box-sizing: border-box; */
+    width: 400px;
+    height: 60%; 
+    /* margin: auto; */
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    /* right: 33.3%;  */
+    justify-content: stretch;
+    /* align-items: stretch;  */
+    border: 10px solid #d84646;
+    /* padding: 25%; */
+}
+
+.card__img {
+    /* display: block; */
+    /* max-width: 100%; */
+    /* overflow: visible;*/
+    /* align-self: flex-start; */
+    /* position: relative; */
+    flex-basis: 10%;
+    
+}
+
+.card__label {
+    display: flex;
+    flex-direction: column;
+    flex-basis: %;
+    /* max-width: 100%;
+    overflow: visible; */
+    /* align-self: flex-start; */ 
+
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
