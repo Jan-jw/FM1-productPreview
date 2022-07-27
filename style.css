@@ -1,10 +1,10 @@
-/* *, *::before, *::after {
-    box-sizing: border-box;
-} */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 
-/* html {
+html {
     box-sizing: border-box;
-} */
+}
 
 body{
     background: hsl(30, 38%, 92%);
@@ -18,39 +18,96 @@ body{
 }
 
 .card {
-    display: flex; /* using felx box */
-    /* box-sizing: border-box; */
-    width: 400px;
-    height: 60%; 
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 45%;
+    height: 60%;
     /* margin: auto; */
     position: absolute;
-    top: 20%;
-    left: 30%;
-    /* right: 33.3%;  */
-    justify-content: stretch;
-    /* align-items: stretch;  */
-    border: 10px solid #d84646;
-    /* padding: 25%; */
+    margin-top: 10%;
+    margin-left: 27%;
+
+    /* border: 1px solid red; */
+    border-radius: 25px;
+    box-shadow: 0 0 2px rgb(208, 207, 207);
 }
 
 .card__img {
-    /* display: block; */
-    /* max-width: 100%; */
-    /* overflow: visible;*/
-    /* align-self: flex-start; */
-    /* position: relative; */
-    flex-basis: 10%;
+    /* position: relative;
+    width: inherit; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  
+    
+    border-radius: 10px 0 0 10px;
+}
+
+.card__about {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  
+    border-radius: 0 10px 10px 0;
+
+    padding: 30px;
+
     
 }
 
-.card__label {
-    display: flex;
-    flex-direction: column;
-    flex-basis: %;
-    /* max-width: 100%;
-    overflow: visible; */
-    /* align-self: flex-start; */ 
+.card__about div {
+    padding-bottom: 10%;
+}
 
+.card__about .card__label {
+    font-family: "Andale Mono", "Courier New", copperplate;
+    color: rgb(177, 173, 173);
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+
+.card__about .card__title {
+    font-family: Fraunces;
+    color: hsl(212, 21%, 14%);
+    font-size: 25px;
+    font-weight: 700;
+
+    
+}
+
+.card__about .card__des {
+    font-family: montserrat;
+    color: rgb(165, 165, 165);
+    font-size: 14px;
+}
+
+.card__about .card__current {
+    font-family: fraunces;
+    color: hsl(158, 36%, 37%);
+    font-size: 25px;
+    font-weight: 700;
+
+    display: inline;
+    
+}
+
+.card__before {
+    display: inline;
+    font-size: 14px;
+    color: rgb(165, 165, 165);
+    text-decoration: line-through;
+
+    padding-left: 5%;
+    
+}
+
+.card__add {
+    background: hsl(212, 21%, 14%);
+    color: #fff;
+    width: 100%;
+    height: 14%;
+    border-radius: 10px;
+
+    font-family: "Comic Sans MS", "Trebuchet MS";
 }
 
 .attribution {
