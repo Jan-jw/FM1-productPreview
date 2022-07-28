@@ -20,8 +20,9 @@ body{
 .card {
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 45%;
-    height: 60%;
+    max-width: 45%;
+    /* max-width: 1400px; */
+    min-height: 60%;
     /* margin: auto; */
     position: absolute;
     margin-top: 10%;
@@ -30,6 +31,8 @@ body{
     /* border: 1px solid red; */
     border-radius: 25px;
     box-shadow: 0 0 2px rgb(208, 207, 207);
+
+    position: fixed;
 }
 
 .card__img {
@@ -42,22 +45,35 @@ body{
     border-radius: 10px 0 0 10px;
 }
 
-.card__about {
-    width: 100%;
-    height: 100%;
+.card__info {
+    max-width: 100%;
+    max-height: 100%;
     overflow: hidden;  
     border-radius: 0 10px 10px 0;
 
     padding: 30px;
 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    border: 1px solid red;
+
     
 }
 
-.card__about div {
-    padding-bottom: 10%;
+.card__info > * {
+    
+    
 }
 
-.card__about .card__label {
+.card__info div {
+    /* padding-bottom: 10%; */
+}
+
+.header__label {
     font-family: "Andale Mono", "Courier New", copperplate;
     color: rgb(177, 173, 173);
     font-size: 15px;
@@ -65,52 +81,133 @@ body{
     letter-spacing: 3px;
 }
 
-.card__about .card__title {
+.header__title {
     font-family: Fraunces;
     color: hsl(212, 21%, 14%);
     font-size: 25px;
     font-weight: 700;
 
-    
+   
 }
 
-.card__about .card__des {
+.card p {
     font-family: montserrat;
     color: rgb(165, 165, 165);
     font-size: 14px;
+    line-height: 20px;
+
+    margin-top: 0;
 }
 
-.card__about .card__current {
+.card__price {
+    width: 50%;
+    align-self: flex-start;
+
+    display: flex;
+}
+
+.card__price .current {
     font-family: fraunces;
     color: hsl(158, 36%, 37%);
     font-size: 25px;
     font-weight: 700;
 
-    display: inline;
     
 }
 
-.card__before {
-    display: inline;
+.before {
     font-size: 14px;
     color: rgb(165, 165, 165);
     text-decoration: line-through;
 
-    padding-left: 5%;
+    align-self: center;
+    padding-left: 10%;
+    /* margin-bottom: 255%; */
     
 }
 
-.card__add {
-    background: hsl(212, 21%, 14%);
-    color: #fff;
+.card__btn {
+    background:  hsl(158, 36%, 37%);
+    /* color: #fff; */
     width: 100%;
-    height: 14%;
-    border-radius: 10px;
+    border-radius: 5px;
 
-    font-family: "Comic Sans MS", "Trebuchet MS";
+    margin: 10% 0 0 0;
+
+
+    padding: 5%;
+    
+    border: 0px;
+
+    background-image: url("./images/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: top 50% left 20% ;
+    
+    
+    /* background-color: #fff; */
+    display: flex;
+    align-items: flex-start;
 }
+
+/* .card__btn .btn__icon {
+    color:#fff;
+    background-image: url("./images/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: 17% ;
+} */
+
+.btn__text {
+    color: #fff;
+    font-family: "Comic Sans MS", "Trebuchet MS";
+    
+    /* float: right; */
+    /* width: 50%; */
+
+    align-self: center;
+    padding-left: 30%;
+}
+
 
 .attribution {
     position: absolute;
     bottom: 0;
 }
+
+@media (max-width:768px) {
+    .card {
+        display: grid;
+        grid-template-rows: 50% 50%;
+
+        width: 45%;
+        height: 60%;
+        /* margin: auto; */
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 27%;
+    
+        /* border: 1px solid red; */
+        border-radius: 25px;
+        box-shadow: 0 0 2px rgb(208, 207, 207);
+    
+        position: fixed;
+    }
+
+    .card__img {
+        /* position: relative;
+        width: inherit; */
+       
+        border-radius: 10px 10px 0 0;
+
+        grid-column: 1 / 3;
+    }
+
+    .card__info {
+         
+        border-radius: 0 0 10px 10px;
+        grid-column: 1 / 3;
+        
+    }
+}
+
+/* as it increase, the cards are bigger, text might be bigger */
+/* as shrink, make it into mobile mode */
