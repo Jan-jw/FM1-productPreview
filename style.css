@@ -114,26 +114,26 @@ body{
 
 }
 .card__btn {
-    background:  var(--dark-blue);
+    background:  var(--dark-cyan);
     width: 100%;
     border-radius: 8px;
     padding: 8%;
     border: 0px;
-    background-image: url("./images/icon-cart.svg");
-    background-repeat: no-repeat;
-    background-position: top 50% left 25% ;
-    
-    align-self: center;
-    display: flex;
-    align-items: flex-start;
-}
-
-.btn__text {
     color: var(--white);
     font-family: var(--font-two);
     font-weight: bold;
     align-self: center;
-    padding-left: 35%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.card__btn:hover {
+    background: var(--dark-blue);
+}
+
+.card__btn svg {
+    margin-right: 5%;
 }
 
 
@@ -197,9 +197,7 @@ body{
     .card__btn {
         background: var(--dark-cyan);
         padding: 4%;
-        background-image: url("./images/icon-cart.svg");
-        background-repeat: no-repeat;
-        background-position: top 50% left 32% ;
+        
        
     }
     .btn__text {
